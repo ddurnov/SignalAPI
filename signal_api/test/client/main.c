@@ -64,6 +64,8 @@ int main(int argc, char * argv[])
             case SERVER_DOWN_IND:
                 printf("RECV: SERVER_DOWN_IND from %d\n", sender(sig_p));
 
+                Interface_disconnect(&interface1);
+
                 if (Interface_connect(&interface1,
                                       queue_p,
                                       LOCAL_CONNECTION,
